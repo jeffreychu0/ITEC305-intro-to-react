@@ -1,38 +1,59 @@
 // jsx: javascript syntax extension
 
-// Goal: make a new component called header:
+import { CORE_CONCEPTS } from './data';
+import Header from './components/Header';
+import CoreConcept from './components/CoreConcept';
 
-import reactImg from './assets/react-core-concepts.png';
+// function UserDiv() {
+//     const user = { firstName: "Jeffrey", lastName: "Chu", age: 19 }
 
-function Header() {
-  const reactDescription = ['Important', 'Crucial', 'Core'];
-  const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-  }
-  
-  const description = reactDescription[getRandomInt(3)]
-
-  return (
-    <header>
-      <img src={reactImg} alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {description} Fundamental React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
+//     return (
+//         <div>
+//             <h2> Name: {user.firstName} {user.lastName} </h2>
+//             <h2> Age: {user.age} </h2>
+//         </div>
+//     )
+// }
 
 function App() {
-  return (
-    <div>
-      <Header/>
-      <main>
-        <h2>Time to get started!</h2>
-      </main>
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <main>
+                <section id="core-concepts">
+                    <h2>Time to get started!</h2>
+                    <ul>
+                        <CoreConcept
+                            {
+                            ...CORE_CONCEPTS[0]
+                            }
+                        />
+                        <CoreConcept
+                            {
+                            ...CORE_CONCEPTS[1]
+                            }
+                        />
+                        <CoreConcept
+                            {
+                            ...CORE_CONCEPTS[2]
+                            }
+                        />
+                        <CoreConcept
+                            {
+                            ...CORE_CONCEPTS[3]
+                            }
+                        />
+                        {/* {
+                            CORE_CONCEPTS.map((concept) => {
+                                return <CoreConcept {...concept} />
+                            })
+                        } */}
+                    </ul>
+                </section>
+            </main>
+            {/* <UserDiv /> */}
+        </div>
+    );
 }
 
 export default App;
