@@ -1,8 +1,9 @@
 // jsx: javascript syntax extension
 
 import { CORE_CONCEPTS } from './data';
-import Header from './components/Header';
-import CoreConcept from './components/CoreConcept';
+import Header from './components/Header/Header';
+import CoreConcept from './components/CoreConcept/CoreConcept';
+import TabButton from './components/TabButton/TabButton';
 
 // function UserDiv() {
 //     const user = { firstName: "Jeffrey", lastName: "Chu", age: 19 }
@@ -50,8 +51,16 @@ function App() {
                         } */}
                     </ul>
                 </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <menu>
+                        <TabButton>Components</TabButton>
+                        <TabButton>JSX</TabButton>
+                        <TabButton>Props</TabButton>
+                        <TabButton>State</TabButton>
+                    </menu>
+                </section>
             </main>
-            {/* <UserDiv /> */}
         </div>
     );
 }

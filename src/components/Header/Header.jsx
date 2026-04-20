@@ -1,5 +1,6 @@
 // Goal: make a new component called header:
-import reactImg from './assets/react-core-concepts.png';
+import reactImg from '../../assets/react-core-concepts.png';
+import './Header.css'
 
 const reactDescription = ['Important', 'Crucial', 'Core'];
 const getRandomInt = (max) => {
