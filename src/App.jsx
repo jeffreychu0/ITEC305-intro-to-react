@@ -27,10 +27,12 @@ function App() {
     const [selectedTopic, setSelectedTopic] = useState()
 
     let tabContent = "Please Select A Button"
+
     function handleSelect(selectedTopic) {
         setSelectedTopic(selectedTopic)
         console.log(selectedTopic)
     }
+
     if (selectedTopic) {
         tabContent = (
         <div id='tab-content'>
@@ -44,6 +46,7 @@ function App() {
         </div>
         )
     }
+
     return (
         <div>
             <Header />
@@ -81,14 +84,12 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton onSelect={() => { handleSelect("components") }}>Components</TabButton>
-                        <TabButton onSelect={() => { handleSelect("jsx") }}>JSX</TabButton>
-                        <TabButton onSelect={() => { handleSelect("props") }}>Props</TabButton>
-                        <TabButton onSelect={() => { handleSelect("state") }}>State</TabButton>
+                        <TabButton onSelect={() => { handleSelect("components") }} isSelected={selectedTopic === "components"}>Components</TabButton>
+                        <TabButton onSelect={() => { handleSelect("jsx") }} isSelected={selectedTopic === "jsx"}>JSX</TabButton>
+                        <TabButton onSelect={() => { handleSelect("props") }} isSelected={selectedTopic === "props"}>Props</TabButton>
+                        <TabButton onSelect={() => { handleSelect("state") }} isSelected={selectedTopic === "state"}>State</TabButton>
                     </menu>
-
                     {tabContent}
-            
                 </section>
             </main>
         </div>
