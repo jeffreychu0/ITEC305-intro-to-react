@@ -1,4 +1,4 @@
-import TabButton from "../TabButton/TabButton"
+import TabButton from "./TabButton/TabButton"
 
 
 export default function Section({title, children, ...props}) {

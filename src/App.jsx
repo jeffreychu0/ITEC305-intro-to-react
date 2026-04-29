@@ -6,8 +6,8 @@ import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react'; // called a hook to work with variables
 import CoreConcepts from './components/CoreConcept/CoreConcepts';
-import Section from './components/Section/Section';
-import Examples from './components/Examples/Examples';
+import Section from './components/Section';
+import Examples from './components/Examples';
 
 // rules about hooks: 
 //functions only called in another react hook
