@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react'; // called a hook to work with variables
+import CoreConcepts from './components/CoreConcept/CoreConcepts';
+import Examples from './components/Example/Examples';
 
 // rules about hooks: 
 //functions only called in another react hook
@@ -48,51 +50,13 @@ function App() {
     }
 
     return (
-        <div>
+        <>
             <Header />
             <main>
-                <section id="core-concepts">
-                    <h2>Time to get started!</h2>
-                    <ul>
-                        <CoreConcept
-                            {
-                            ...CORE_CONCEPTS[0]
-                            }
-                        />
-                        <CoreConcept
-                            {
-                            ...CORE_CONCEPTS[1]
-                            }
-                        />
-                        <CoreConcept
-                            {
-                            ...CORE_CONCEPTS[2]
-                            }
-                        />
-                        <CoreConcept
-                            {
-                            ...CORE_CONCEPTS[3]
-                            }
-                        />
-                        {/* {
-                            CORE_CONCEPTS.map((concept) => {
-                                return <CoreConcept {...concept} />
-                            })
-                        } */}
-                    </ul>
-                </section>
-                <section id="examples">
-                    <h2>Examples</h2>
-                    <menu>
-                        <TabButton onSelect={() => { handleSelect("components") }} isSelected={selectedTopic === "components"}>Components</TabButton>
-                        <TabButton onSelect={() => { handleSelect("jsx") }} isSelected={selectedTopic === "jsx"}>JSX</TabButton>
-                        <TabButton onSelect={() => { handleSelect("props") }} isSelected={selectedTopic === "props"}>Props</TabButton>
-                        <TabButton onSelect={() => { handleSelect("state") }} isSelected={selectedTopic === "state"}>State</TabButton>
-                    </menu>
-                    {tabContent}
-                </section>
+                <CoreConcepts/>
+                <Examples/>
             </main>
-        </div>
+        </>
     );
 }
 
