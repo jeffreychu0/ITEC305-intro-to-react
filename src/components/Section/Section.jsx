@@ -1,7 +1,7 @@
 import TabButton from "../TabButton/TabButton"
 
 
-export default function Examples({title, children, ...props}) {
+export default function Section({title, children, ...props}) {
     
     return (
         <section {...props}>

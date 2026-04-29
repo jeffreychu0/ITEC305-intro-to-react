@@ -6,7 +6,7 @@ import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react'; // called a hook to work with variables
 import CoreConcepts from './components/CoreConcept/CoreConcepts';
-import Examples from './components/Example/Examples';
+import Section from './components/Section/Section';
 
 // rules about hooks: 
 //functions only called in another react hook
@@ -54,7 +54,7 @@ function App() {
             <Header />
             <main>
                 <CoreConcepts/>
-                <Examples title="Examples" id="examples">
+                <Section title="Examples" id="examples">
                     <menu>
                         <TabButton className={selectedTopic === "components" ? 'active' : ''} onClick={() => handleSelect("components")}>Components</TabButton>
                         <TabButton className={selectedTopic === "jsx" ? 'active' : ''} onClick={() => handleSelect("jsx")}>JSX</TabButton>
@@ -62,7 +62,7 @@ function App() {
                         <TabButton className={selectedTopic === "state" ? 'active' : ''} onClick={() => handleSelect("state")}>State</TabButton>
                     </menu>
                     {tabContent}
-                </Examples>
+                </Section>
             </main>
         </>
     );
