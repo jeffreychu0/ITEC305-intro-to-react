@@ -56,10 +56,10 @@ function App() {
                 <CoreConcepts/>
                 <Examples title="Examples" id="examples">
                     <menu>
-                        <TabButton onSelect={() => { handleSelect("components") }} isSelected={selectedTopic === "components"}>Components</TabButton>
-                        <TabButton onSelect={() => { handleSelect("jsx") }} isSelected={selectedTopic === "jsx"}>JSX</TabButton>
-                        <TabButton onSelect={() => { handleSelect("props") }} isSelected={selectedTopic === "props"}>Props</TabButton>
-                        <TabButton onSelect={() => { handleSelect("state") }} isSelected={selectedTopic === "state"}>State</TabButton>
+                        <TabButton className={selectedTopic === "components" ? 'active' : ''} onClick={() => handleSelect("components")}>Components</TabButton>
+                        <TabButton className={selectedTopic === "jsx" ? 'active' : ''} onClick={() => handleSelect("jsx")}>JSX</TabButton>
+                        <TabButton className={selectedTopic === "props" ? 'active' : ''} onClick={() => handleSelect("props")}>Props</TabButton>
+                        <TabButton className={selectedTopic === "state" ? 'active' : ''} onClick={() => handleSelect("state")}>State</TabButton>
                     </menu>
                     {tabContent}
                 </Examples>

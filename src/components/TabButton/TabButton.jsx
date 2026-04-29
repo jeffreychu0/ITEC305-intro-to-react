@@ -1,16 +1,10 @@
 import './TabButton.css'
 
 // Children is a special property in the props
-function TabButton({children, onSelect, isSelected}) {
-    console.log("Tab is Rendered")
-
-    function handleClick() {
-        console.log("Hello World");
-    }
-
+function TabButton({children, onSelect, isSelected, ...props}) {
     return (
         <li>
-            <button className = {isSelected ? 'active' : ''} onClick={onSelect}>{children}</button>
+            <button {...props}>{children}</button>
         </li>
     )
 }

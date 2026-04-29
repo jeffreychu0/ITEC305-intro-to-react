@@ -1,5 +1,5 @@
 import TabButton from "../TabButton/TabButton"
-import './examples.css'
+
 
 export default function Examples({title, children, ...props}) {
     
